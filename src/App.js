@@ -4,15 +4,19 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import './App.css';
+import Background from './components/Background';
 
 function App() {
 
   return (
+    <>
+      <Background/>
       <Routes>
-        <Route exact path="/" element={<Home></Home>}/>
-        <Route exact path="/contact" component={ Contact }/>
-        <Route exact path="/projects" component={ Projects }/>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/contact" element={ <Contact/> }/>
+        <Route exact path="/projects" element={ <Projects/> }/>
       </Routes>
+    </>
   )
 }
 
